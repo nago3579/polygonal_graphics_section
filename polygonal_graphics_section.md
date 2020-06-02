@@ -4,7 +4,7 @@
 ---
 
 <h1 id="how-polygonal-graphics-are-made">How Polygonal Graphics Are Made</h1>
-<p>Like atoms, most computer-generated 3D objects are built with polygons, collections of triangles, or squares connected together in 3D space to approximate shapes. In this article, we will explore how computers see polygons out of information and turn that into graphics like you would see in a movie or video game. We will be using <a href="https://www.babylonjs.com/">Babylon.js</a>, an in-browser rendering engine that uses WebGL, to visualize some of the concepts discussed.</p>
+<p>Most computer-generated 3D objects are built with polygons, collections of triangles, or quadrilaterals connected together in 3D space to approximate shapes. In this article, we will explore how computers see polygons out of information and turn that into graphics like you would see in a movie or video game. We will be using <a href="https://www.babylonjs.com/">Babylon.js</a>, an in-browser rendering engine that uses WebGL, to visualize some of the concepts discussed.</p>
 <h3 id="d-from-2d">3D from 2D</h3>
 <p>Computers handle 2D images really well. To take advantage of this property, 3D models are most commonly built from triangles or less commonly, from quadrilaterals arranged as faces of a solid. Shapes like spheres and cylinders can not be broken down into discrete triangles, so we approximate them as polygons with many faces.</p>
 <p>These faces are constructed by vertices made up of points. We can visualize these vertices with wireframes, where vertices are highlighted and faces are transparent. For example, here is a <a href="https://playground.babylonjs.com/#T4TNWL">wireframe of a sphere</a>.</p>
@@ -50,5 +50,5 @@ box<span class="token punctuation">.</span>subMeshes<span class="token punctuati
 <h3 id="transformations">Transformations</h3>
 <p>Since the end result of most 3D graphics need to be displayed on a 2D screen from a fixed viewpoint, 3D models need to be able to be rotated and moved in respect to the viewer. This is done with transformation matrices. In essence, these matrices define how any given point would be rotated. This matrix is then multiplied by the matrix containing the vertices of the shape to define new positions for each point. Due to the ease of using transformation matrices, it is far easier to move and transform all 3D models around the viewer than to move the viewer themselves.</p>
 <h3 id="wrap-up">Wrap Up</h3>
-<p>Polygonal objects are the backbone of 3D graphics, and are worth understanding to better optimize your graphical projects or find ways to increase detail.</p>
+<p>Polygonal objects are the backbone of 3D graphics, and are crucial for computers to approximate and visualize our world. The construction of vertices, faces, and textures have endless applications, including film CGI, video games, architecture, and 3D printing.</p>
 
